@@ -6,17 +6,20 @@
   <title>Panel de Accesos PDT</title>
   <style>
     :root {
-      --page-bg: #e7ebf0;
-      --hero-bg: #0b5674;
-      --hero-text: #f8fafc;
-      --hero-muted: #bdd7e5;
-      --card-bg: #f3f5f7;
-      --card-border: #d9dee6;
-      --title: #0f172a;
-      --text: #475569;
-      --chip: #0891b2;
-      --button: #0b6182;
-      --button-hover: #0a4f6a;
+      --pdt-negro: #000000;
+      --pdt-crema: #f8f3e9;
+      --pdt-tostado: #c06e32;
+      --pdt-tostado-hover: #a85821;
+      --hero-bg: #000000;
+      --hero-text: #f8f3e9;
+      --hero-muted: #e6d7c2;
+      --card-bg: #fffaf1;
+      --card-border: #d9c8ab;
+      --title: #000000;
+      --text: #2b2b2b;
+      --chip: #c06e32;
+      --button: #000000;
+      --button-hover: #c06e32;
     }
 
     * {
@@ -26,19 +29,37 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, var(--hero-bg) 0 290px, var(--page-bg) 290px 100%);
+      background: linear-gradient(180deg, var(--hero-bg) 0 320px, var(--pdt-crema) 320px 100%);
       color: var(--title);
     }
 
     .wrapper {
       width: min(1100px, 100% - 2rem);
       margin: 0 auto;
-      padding: 22px 0 38px;
+      padding: 16px 0 38px;
+      position: relative;
+    }
+
+    .corner-logo {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 20;
+    }
+
+    .corner-logo img {
+      width: 76px;
+      height: 76px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #e2cfae;
+      background: #fff8ed;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
     }
 
     .hero {
       color: var(--hero-text);
-      padding: 8px 10px 20px;
+      padding: 12px 10px 20px;
     }
 
     .hero .eyebrow {
@@ -80,7 +101,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.09);
     }
 
     .card .tag {
@@ -109,7 +130,7 @@
     .btn {
       border: 0;
       background: var(--button);
-      color: #fff;
+      color: var(--pdt-crema);
       text-decoration: none;
       font-size: 1.02rem;
       font-weight: 700;
@@ -118,20 +139,21 @@
       white-space: nowrap;
       min-width: 190px;
       text-align: center;
-      transition: transform 0.16s ease, background 0.2s ease;
-      box-shadow: 0 8px 18px rgba(11, 97, 130, 0.24);
+      transition: transform 0.16s ease, background 0.2s ease, color 0.2s ease;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
     }
 
     .btn:hover,
     .btn:focus-visible {
       background: var(--button-hover);
+      color: var(--pdt-crema);
       transform: translateY(-1px);
       outline: none;
     }
 
     .footer {
       padding: 10px;
-      color: #5b6b7c;
+      color: #5e4d3c;
       font-size: 0.92rem;
     }
 
@@ -144,10 +166,18 @@
       .btn {
         width: 100%;
       }
+
+      .corner-logo img {
+        width: 62px;
+        height: 62px;
+      }
     }
   </style>
 </head>
 <body>
+  <a class="corner-logo" href="https://empaquemerma.vercel.app/menu.html" target="_blank" rel="noopener noreferrer" aria-label="Pan de Tata">
+    <img src="logopandetata.png" alt="Logo Pan de Tata" />
+  </a>
   <div class="wrapper">
     <header class="hero">
       <p class="eyebrow">Panel de accesos</p>
