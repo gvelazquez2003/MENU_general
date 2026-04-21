@@ -36,15 +36,16 @@
     .wrapper {
       width: min(1100px, 100% - 2rem);
       margin: 0 auto;
-      padding: 16px 0 38px;
+      padding: 112px 0 38px;
       position: relative;
     }
 
     .corner-logo {
       position: fixed;
       top: 14px;
-      right: 14px;
+      left: 14px;
       z-index: 20;
+      pointer-events: none;
     }
 
     .corner-logo img {
@@ -175,9 +176,9 @@
   </style>
 </head>
 <body>
-  <a class="corner-logo" href="https://empaquetado-merma.vercel.app/docs/menu.html" target="_blank" rel="noopener noreferrer" aria-label="Pan de Tata">
+  <div class="corner-logo" aria-hidden="true">
     <img src="logopandetata.png" alt="Logo Pan de Tata" />
-  </a>
+  </div>
   <div class="wrapper">
     <header class="hero">
       <p class="eyebrow">Panel de accesos</p>
